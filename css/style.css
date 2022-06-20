@@ -16,6 +16,12 @@ ul {
     background-color: rgb(177, 177, 177);
 }
 
+.logo {
+    width: 220px;
+    height: 80px;
+}
+
+
 /*home*/
 
 .carousel-caption {
@@ -218,7 +224,7 @@ ul {
     color: #84a98c;
     margin: 1rem;
     font-size: 4rem;
-    
+
 }
 
 .parrafoservicios {
@@ -302,106 +308,125 @@ ul {
     font-style: italic;
 }
 
-/* Diseño responsive para dispositivos medianos*/
-/* Diseño responsive para galeria */
+/* Diseño responsive para dispositivos medianos solo galeria y nosotros*/
 
-@media (max-width:800px) {
+
+@media (max-width:820px) {
+
+    /* Diseño responsive para galeria */
     .column {
         flex: 50%;
     }
+
+    .row {
+       margin: 0;
+    }
+
+
+    /* Diseño responsive nosotros */
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-template-areas:
+
+            "section1 section1"
+            "section2 section2"
+            "opiniones opiniones"
+            "section3 section3"
+            "section4 section4"
+    }
 }
+
+.imgnosotros {
+    width: 100%;
+}
+
 
 @media (max-width:600px) {
     .column {
         flex: 100%;
     }
+
     /* Diseño responsive footer */
     .footer {
         flex-direction: column;
         align-items: center;
         align-content: center;
     }
+
     .redes {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap
     }
-/* Diseño responsive servicios */
-    .grilla2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.3fr 1.4fr 1.4fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "titulo titulo titulo"
-            "servicio1 servicio2"
-            "servicio3 servicio4"
-            "servicio5 servicio6";
-    }
-}
-
-/* Diseño responsive para dispositivos pequeños*/
-@media (max-width:415px) {
-    .logo {
-        display: none;
-    }
 
 
-/* Diseño responsive nosotros */
-    .grilla {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
-        gap: 0px 0px;
-        grid-template-areas:
-            
-            "section1 section1"
-            "section2 section2"
-            "opiniones opiniones"
-            "section3 section3"
-            "section4 section4"
-            
-    }
-    /* Diseño responsive servicios */
-    .titulosection2 {
-        align-items: center;
-        align-content: center;
-    }
+    /* Diseño responsive para dispositivos pequeños*/
+    @media (max-width:415px) {
+        .logo {
+            width: 100px;
+            height: 40px;
+        }
 
-    .grilla2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.3fr 1.4fr 1.4fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-            "titulo titulo titulo"
-            "servicio1 servicio1 servicio1"
-            "servicio2 servicio2 servicio2"
-            "servicio3 servicio3 servicio3"
-            "servicio4 servicio4 servicio4"
-            "servicio5 servicio5 servicio5"
-            "servicio6 servicio6 servicio6"
-           
-    }
-/* Diseño responsive galeria */
-    .column {
-        flex: 100%;
-    }
-    /* Diseño responsive footer */
-.footer {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-    }
+        /* Diseño responsive nosotros */
+        .grilla {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+            gap: 0px 0px;
+            grid-template-areas:
 
-    .redes {
-        display: none;
-    }
+                "section1 section1"
+                "section2 section2"
+                "opiniones opiniones"
+                "section3 section3"
+                "section4 section4"
 
-  .imgnosotros {
-        width: 100%;
-        height: auto;
+        }
+
+        /* Diseño responsive servicios */
+        .titulosection2 {
+            align-items: center;
+            align-content: center;
+        }
+
+        .grilla2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.3fr 1.4fr 1.4fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "titulo titulo titulo"
+                "servicio1 servicio1 servicio1"
+                "servicio2 servicio2 servicio2"
+                "servicio3 servicio3 servicio3"
+                "servicio4 servicio4 servicio4"
+                "servicio5 servicio5 servicio5"
+                "servicio6 servicio6 servicio6"
+
+        }
+
+        /* Diseño responsive galeria */
+        .column {
+            flex: 100%;
+        }
+
+        /* Diseño responsive footer */
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+        }
+
+        .redes {
+            display: none;
+        }
+
+        .imgnosotros {
+            width: 100%;
+            height: auto;
+        }
     }
-}
